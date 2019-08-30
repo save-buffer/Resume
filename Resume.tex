@@ -1,0 +1,274 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{fontawesome}
+\usepackage{tikz}
+\usepackage{graphicx}
+
+\usepackage[sfdefault, thin]{roboto}
+\renewcommand\familydefault{\sfdefault} 
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% -------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+\item\small{
+    \textbf{#1}{\textbf{:} #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemNoTitle}[1]{
+\item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{8pt}
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    {\small#3} & {\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{}
+\newcommand{\resumeSubHeadingListEnd}{}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+  \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\def\ci#1{\textcircled{\resizebox{.5em}{!}{#1}}}
+\definecolor{lightblue}{RGB}{60, 200, 225}
+
+\newcommand{\fakesection}[1]{%
+  \par\refstepcounter{section}% Increase section counter
+  \sectionmark{#1}% Add section mark (header)
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}% Add section to ToC
+  % Add more content here, if needed.
+}
+
+% -------------------------------------------
+%%%%%% CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+% ----------HEADING-----------------
+\begin{tabularx}{\textwidth}{ X r }
+  {\vspace{-32pt}\color{lightblue}{\fontsize{45}{30}\selectfont Sasha Krassovsky}} &
+  \begin{tabular}{ r }
+    \ci{\faPhone}+1 (425) 614-9499 \\
+    \href{https://www.github.com/save-buffer}{\ci{\faGithub}save-buffer} \\
+    \href{mailto:krassovskysasha@gmail.com}{\ci{\faEnvelope}krassovskysasha@gmail.com}\\
+    \href{https://www.linkedin.com/in/sashka}{\ci{\faLinkedin}linkedin.com/in/sashka}\\
+    \\
+    \\
+  \end{tabular}
+\end{tabularx}
+
+\fakesection{Skills}
+\begin{tabularx}{\textwidth}{@{\extracolsep{\fill} } c c c c}
+  Algorithms & SIMD & Compilers & Databases \\
+  Embedded Systems & Code Optimization & OpenCV & Machine Learning \\
+\end{tabularx}
+\fakesection{Experience}
+\resumeSubHeadingListStart
+
+\vspace{4pt}
+\resumeSubheading
+{Facebook}{Menlo Park, CA}
+{Software Engineering Intern: Oculus Application Platform Team}{June 2019 - Present}
+\vspace{8pt}
+\resumeItemListStart
+\resumeItem{Swift Playgrounds on Windows}
+{Implemented Swift Playgrounds on Windows, using GDI32 for UI, Apple's Swift compiler
+  for frontend, and LLVM's ORC to JIT and execute the code. Involved modifications
+  at both the AST level and the IR level, and submitting patches to both the compiler
+  and LLVM. Source Code at \href{https://www.github.com/save-buffer/swift-repl}
+  {github.com/save-buffer/swift-repl}}
+\resumeItemListEnd
+\vspace{4pt}
+\resumeSubheading
+{Bespoke Silicon Group}{Seattle, WA}
+{Undergraduate Researcher}{March 2019 - Present}
+\resumeItemListStart
+\resumeItem{Hammberblade Manycore}
+{Created APIs for and tested a RISC-V Manycore CPU. Further, created highly optimized kernels
+  for machine learning on the Manycore.}
+\resumeItemListEnd
+\resumeSubheading
+{MemSQL}{Seattle, WA}
+{Software Engineering Intern: Query Execution}{June 2018 - September 2018}
+\vspace{8pt}
+\resumeItemListStart
+\resumeItem{SIMD for Query Execution}
+{Worked on MemSQL columnstore: Implemented low-level optimizations for summation in
+  query execution engine with AVX2. Achieved up to 20x speedup of internal components,
+  resulting in up to 1.8x speedup of total query execution time of customer workloads.}
+\resumeItemListEnd
+\vspace{4pt}
+\resumeSubheading
+{Husky Robotics}{Seattle, WA}
+{Software Team Lead}{June 2018 - Present}
+\vspace{8pt}
+\resumeItemListStart
+\resumeItem{Husky Robotics Software Team}
+{The team works to create a Mars Rover to compete in the University and Canadian
+  Rover Challenges. Wrote code ranging from sensor interfaces to networking to
+  inverse kinematics to computer vision, and guided others in helping implement
+  these things. Was a member of the team for one year prior to election as team
+  leader. The team won 2nd place at the 2019 Canadian Rover Challenge.}
+\resumeItemListEnd
+\vspace{4pt}
+\resumeSubheading
+{MemSQL}{Seattle, WA}
+{Software Engineering Intern}{August 2017 - September 2017}
+\vspace{8pt}
+\resumeItemListStart
+\resumeItem{Hash Join Optimization}
+{Worked on MemSQL in-memory distributed DBMS, optimizing Hash Join when joining on
+  Integer Keys. Achieved ~2x speedup on Hash Join}
+\resumeItem{Graphical Explain Plan}
+{Created graphical explain plan visualizer for viewing a breakdown of queries.}
+\resumeItemListEnd
+\vspace{4pt}
+\resumeSubheading
+{Microsoft}{Redmond, WA}
+{High School Intern}{June 2016 - August 2016}
+\vspace{8pt}
+\resumeItemListStart
+\resumeItem{Cyberattack Analytics Dashboard}
+{Developed a Web Application which visualized statistics on cyberattacks 
+  On display in the CDOC (Cyber-Defense Operations Center)}
+\resumeItem{HoloFlight}
+{Participated in the OneWeek hackathon, where I worked on HoloFlight, an
+  application for the Hololens that directs a drone to fly to waypoints selected
+  on a holographic map. Won 2nd place in the HoloHack division.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\fakesection{Education}
+\resumeSubHeadingListStart
+\vspace{8pt}
+\begin{tabular*}{0.97\textwidth}{@{\extracolsep{\fill}}lrr}
+  \textbf{University of Washington} & Overall GPA: 3.69 & Seattle, WA \\
+  {\small BS Computer Science} & {\small In-Major GPA: 3.79} & {\small June 2020} \\
+  {\small BS Discrete Mathematics} & {\small In-Major GPA: 3.63} & {\small June 2020} \\
+\end{tabular*}\vspace{-5pt}
+
+\resumeSubHeadingListEnd
+
+\pagebreak
+
+\fakesection{Coursework}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{\color{lightblue}Coursework}{}
+{}{}
+\vspace{-8pt}
+\resumeItemListStart
+\resumeItem{Algorithms}
+{Proof-based class focusing on using existing techniques to create and prove
+new algorithms.}
+\resumeItem{Digital Circuit Design}
+{Project-based clsas focusing on introducing the basics of Verilog and FPGAs. Created a
+  clone of Dance Dance Revolution on an FPGA using an LED matrix and four pushbuttons.}
+\resumeItem{Deep Learning on Coursera}
+{Introductory online machine learning course taught by Andrew Ng. Homework done in Python,
+  with a combination of hand-written and premade machine learning software.}
+\resumeItem{Embedded Systems}
+{Project-based class focusing on the creation of an embedded operating system. Created
+  a medical device using Arduino running a custom scheduler and task queue system.}
+\resumeItem{Stanford Compilers on Coursera}
+{Introductory online compilers course taught by Prof. Alex Aiken. Implemented a compiler
+  for COOL (Classroom Object-Oriented Language) targetting MIPS.}
+\resumeItem{3D Graphics at DigiPen Institute of Technology}
+{Summer class introducing 3D Graphics, first algebraically and then using linear algebra.
+  Implemented a 3D Graphics pipeline from scratch in C (starting only with a SetPixel
+  function) which draws colorful cubes, and allows the user to rotate the camera.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\fakesection{Accomplishments}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{\color{lightblue}Accomplishments}{}
+{}{}
+\vspace{-8pt}
+\resumeItemListStart
+\resumeItem{2017 ACM ICPC Regionals Qualifier}
+{Won 6th place at the UW ACM ICPC competition on team MATLAB Indexers, qualifying
+  for regionals.}
+\resumeItem{Hunt the Wumpus Alumni Challenge 2016 Winner}
+{Programmed a game in C\# from scratch and was selected by a panel of judges as the winner for
+  having the most polished and most entertaining game. Available at
+  \href{https://www.github.com/save-buffer/ShooterGame}{github.com/save-buffer/ShooterGame}}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+\fakesection{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{\color{lightblue}Projects}{}
+{}{}
+\vspace{-8pt}
+\resumeItemListStart
+\resumeItem{Robotics Algorithms}
+{Computer vision and inverse kinematics algorithms written for use by the Husky Robotics
+  team. Computer vision can locate tennis balls in an image and segment a keyboard into
+  keys. The inverse kinematics algorithm was created by myself and another member of the
+  team and implemented by me. Available at
+  \href{https://github.com/save-buffer/robot\_cv}{github.com/save-buffer/robot\_cv},p
+  \href{https://github.com/save-buffer/UseArm}{github.com/save-buffer/UseArm}}
+\resumeItem{Slang}
+{Compiler for a low-level functional declarative language (like Erlang) written in C.
+Available at \href{https://github.com/save-buffer/slang}{github.com/save-buffer/slang}}
+\resumeItem{SashCopter}
+{An attempt at controlling a drone using an EEG Headset. Main drone control software is
+  written. Mind-controlled aspect deemed unsuccessful due to the lack of resolution on
+  the headset.  
+  \href{https://www.github.com/save-buffer/SashCopter}{github.com/save-buffer/SashCopter}}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
