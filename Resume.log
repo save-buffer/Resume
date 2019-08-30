@@ -1,10 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.2)  29 AUG 2019 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.2)  30 AUG 2019 08:27
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input Resume.tex
-(./Resume.tex (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
+**Resume.tex
+(./Resume.tex
+LaTeX2e <2018-04-01> patch level 5
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -869,7 +870,7 @@ Here is how much of TeX's memory you used:
  22440 multiletter control sequences out of 15000+600000
  35109 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,54p,415b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,19n,54p,408b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/roboto/rbto_bergpl.enc}{/
 usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/roboto/rbto_idpkzy.enc}{/usr/
 local/texlive/2018/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}</
@@ -877,7 +878,7 @@ usr/local/texlive/2018/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pf
 b></usr/local/texlive/2018/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/google/roboto/Roboto-Thin.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Resume.pdf (2 pages, 74164 bytes).
+Output written on Resume.pdf (2 pages, 74166 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream
