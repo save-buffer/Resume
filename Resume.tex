@@ -102,19 +102,32 @@
   \end{tabular}
 \end{tabularx}
 
-\fakesection{Skills}
-\begin{tabularx}{\textwidth}{@{\extracolsep{\fill} } c c c c}
-  Algorithms & SIMD & Compilers & Databases \\
-  Embedded Systems & Code Optimization & OpenCV & Machine Learning \\
-\end{tabularx}
+\fakesection{Goal}
+I'm an engineer passionate in designing and applying novel approaches to make programs run
+faster. I am interested in any of low-level optimization, heterogeneous computing, compilers,
+and distributed systems. 
 \fakesection{Experience}
 \resumeSubHeadingListStart
 
 \vspace{4pt}
 \resumeSubheading
+{SingleStore}{Seattle, WA}
+{Software Engineer: Query Execution}{June 2020 - Present}
+\vspace{2pt}
+\resumeItemListStart
+\resumeItem{AVX-512 Prototype}
+{Partnered with Intel to migrate a portion of SingleStore's vectorized query execution to
+  AVX-512 and profiled the results on the new-generation Icelake architecture. Details can
+  be found in my \href{https://www.singlestore.com/blog/a-programmers-perspective/}{blog post}.}
+\resumeItem{Selective Decoding}
+{Optimized point lookups in columnar tables by seeking and decoding only the necessary rows,
+  as opposed to large chunks of rows. Increased efficiency of queries with selective filters.}
+\resumeItemListEnd
+\vspace{4pt}
+\resumeSubheading
 {Facebook}{Menlo Park, CA}
 {Software Engineering Intern: Oculus Application Platform Team}{June 2019 - September 2019}
-\vspace{8pt}
+\vspace{2pt}
 \resumeItemListStart
 \resumeItem{Swift Playgrounds on Windows}
 {Implemented Swift Playgrounds on Windows, using GDI32 for UI, Apple's Swift compiler
@@ -126,18 +139,21 @@
 \vspace{4pt}
 \resumeSubheading
 {Bespoke Silicon Group}{Seattle, WA}
-{Undergraduate Researcher}{March 2019 - Present}
+{Undergraduate Researcher}{March 2019 - June 2020}
 \resumeItemListStart
 \resumeItem{Hammberblade Manycore}
 {Created APIs for and tested a RISC-V Manycore CPU. Further, created highly optimized kernels
-  for machine learning on the Manycore.}
+  for machine learning on the Manycore. Worked on compiler optimization to issue remote
+  loads earlier.}
+\resumeItem{Thesis: Exploring Single-Core Optimizations for Manycore Architectures}{Explored
+  how I optimized kernels and details regarding my compiler optimziation.}
 \resumeItemListEnd
 \resumeSubheading
 {MemSQL}{Seattle, WA}
 {Software Engineering Intern: Query Execution}{June 2018 - September 2018}
-\vspace{8pt}
+\vspace{2pt}
 \resumeItemListStart
-\resumeItem{SIMD for Query Execution}
+\resumeItem{Vectorized Aggregation}
 {Worked on MemSQL columnstore: Implemented low-level optimizations for summation in
   query execution engine with AVX2. Achieved up to 20x speedup of internal components,
   resulting in up to 1.8x speedup of total query execution time of customer workloads.}
@@ -146,20 +162,18 @@
 \resumeSubheading
 {Husky Robotics}{Seattle, WA}
 {Software Team Lead}{June 2018 - October 2019}
-\vspace{8pt}
+\vspace{2pt}
 \resumeItemListStart
-\resumeItem{Husky Robotics Software Team}
-{The team works to create a Mars Rover to compete in the University and Canadian
-  Rover Challenges. Wrote code ranging from sensor interfaces to networking to
-  inverse kinematics to computer vision, and guided others in helping implement
-  these things. Was a member of the team for one year prior to election as team
-  leader. The team won 2nd place at the 2019 Canadian Rover Challenge.}
+\resumeItem{Husky Robotics Software Team Lead}
+{Helped design and implement the software for a mars rover. Implemented a wide range of
+  software from sensors to networking to inverse kinematics to computer vision.  The team
+  won 2nd place at the 2019 Canadian Rover Challenge.}
 \resumeItemListEnd
 \vspace{4pt}
 \resumeSubheading
 {MemSQL}{Seattle, WA}
 {Software Engineering Intern}{August 2017 - September 2017}
-\vspace{8pt}
+\vspace{2pt}
 \resumeItemListStart
 \resumeItem{Hash Join Optimization}
 {Worked on MemSQL in-memory distributed DBMS, optimizing Hash Join when joining on
@@ -171,7 +185,7 @@
 \resumeSubheading
 {Microsoft}{Redmond, WA}
 {High School Intern}{June 2016 - August 2016}
-\vspace{8pt}
+\vspace{2pt}
 \resumeItemListStart
 \resumeItem{Cyberattack Analytics Dashboard}
 {Developed a Web Application which visualized statistics on cyberattacks.
@@ -187,9 +201,9 @@
 \resumeSubHeadingListStart
 \vspace{8pt}
 \begin{tabular*}{0.97\textwidth}{@{\extracolsep{\fill}}lrr}
-  \textbf{University of Washington} & Overall GPA: 3.69 & Seattle, WA \\
-  {\small BS Computer Science with Honors} & {\small In-Major GPA: 3.79} & {\small June 2020} \\
-  {\small BS Discrete Mathematics} & {\small In-Major GPA: 3.63} & {\small June 2020} \\
+  \textbf{University of Washington} & Overall GPA: 3.70 & Seattle, WA \\
+  {\small BS Computer Science with Honors} & {\small In-Major GPA: 3.76} & {\small June 2020} \\
+  {\small BS Discrete Mathematics} & {\small In-Major GPA: 3.62} & {\small June 2020} \\
 \end{tabular*}\vspace{-5pt}
 
 \resumeSubHeadingListEnd
