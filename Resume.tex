@@ -33,6 +33,13 @@
 
 \urlstyle{same}
 
+\newcommand{\blackHref}[2]{\href{#1}{\color{black}{#2}}}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=lightblue,
+}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -95,9 +102,9 @@
   {\vspace{-32pt}\color{lightblue}{\fontsize{45}{30}\selectfont Sasha Krassovsky}} &
   \begin{tabular}{ r }
     \ci{\faPhone}+1 (425) 614-9499 \\
-    \href{https://www.github.com/save-buffer}{\ci{\faGithub}save-buffer} \\
-    \href{mailto:krassovskysasha@gmail.com}{\ci{\faEnvelope}krassovskysasha@gmail.com}\\
-    \href{https://www.linkedin.com/in/sashka}{\ci{\faLinkedin}linkedin.com/in/sashka}\\
+    \blackHref{https://www.github.com/save-buffer}{\ci{\faGithub}save-buffer} \\
+    \blackHref{mailto:krassovskysasha@gmail.com}{\ci{\faEnvelope}krassovskysasha@gmail.com} \\
+    \blackHref{https://www.linkedin.com/in/sashka}{\ci{\faLinkedin}linkedin.com/in/sashka} \\
     \\
     \\
   \end{tabular}
@@ -158,12 +165,12 @@ and distributed systems.
 {Undergraduate Researcher}{March 2019 - June 2020}
 \resumeItemListStart
 \vspace{2pt}
-\resumeItem{Hammberblade Manycore}
+\resumeItem{Hammerblade Manycore}
 {Created APIs for and tested a RISC-V Manycore CPU. Further, created highly optimized kernels
   for machine learning on the Manycore. Worked on compiler optimization to issue remote
   loads earlier.}
 \resumeItem{Thesis: Exploring Single-Core Optimizations for Manycore Architectures}{Explored
-  how I optimized kernels and details regarding my compiler optimziation.}
+  how I optimized kernels and details regarding my compiler optimization.}
 \resumeItemListEnd
 \vspace{2pt}
 \resumeSubheading
