@@ -117,9 +117,22 @@ and distributed systems.
 \fakesection{Experience}
 \resumeSubHeadingListStart
 
+\resumeSubheading{Voltron Data}{Remote (Seattle, WA)}
+{Software Engineer}{October 2021 - Present}
+\resumeItemListStart
+\resumeItem{Hash Join Spilling}
+{Designed and implemented a solution to joining larger-than-memory datasets by partitioning
+  and writing the dataset to disk. Optimized for modern NVME SSDs, achieving maximum throughput.}
+\resumeItem{Bloom Filter Pushdown}
+{Implemented a novel dynamic Bloom filter strategy, where the filter is pushed as early as possible
+  in a tree of joins, resulting in orders-of-magnitude speedups in certain workloads.}
+\resumeItem{Performance Investigations}
+{Investigated performance of various subcomponents of the query engine and prototyped solutions
+  to performance issues.}
+\resumeItemListEnd
 \vspace{2pt}
 \resumeSubheading{SingleStore}{Seattle, WA}
-{Software Engineer: Query Execution}{June 2020 - Present}
+{Software Engineer: Query Execution}{June 2020 - October 2021}
 \resumeItemListStart
 \resumeItem{AVX-512 Prototype}
 {Designed and implemented a prototype of AVX-512-based query execution in SingleStore, a
@@ -134,9 +147,9 @@ and distributed systems.
 \resumeItem{Regression Hunting}
 {Compared assembly code between old and new compilers, and provided necessary compiler hints
   (such as forcing inlining) to fix performance regressions.}
-\resumeItem{Streamlined Columnstore Query Execution Codebase}
+\resumeItem{Columnstore Query Execution}
 {Proposed, designed, and implemented a significant refactor of core columnstore code,
-  dramatically increasing maintanability and understandability.}
+  exposing several inefficiencies leading to a 2x speedup on some TPC-H queries.}
 \resumeItem{Reading Group Lead}
 {Led discussions of cutting-edge academic papers on a variety of topics including GPU-based
   query execution, learned indices, and E-graphs.}
@@ -215,82 +228,4 @@ and distributed systems.
 \end{tabular*}\vspace{-5pt}
 
 \resumeSubHeadingListEnd
-
-\pagebreak
-
-\fakesection{Coursework}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{\color{lightblue}Coursework}{}
-{}{}
-\vspace{-8pt}
-\resumeItemListStart
-\resumeItem{Algorithms}
-{Proof-based class focusing on using existing techniques to create and prove
-new algorithms.}
-\resumeItem{Digital Circuit Design}
-{Project-based clsas focusing on introducing the basics of Verilog and FPGAs. Created a
-  clone of Dance Dance Revolution on an FPGA using an LED matrix and four pushbuttons.}
-\resumeItem{Deep Learning on Coursera}
-{Introductory online machine learning course taught by Andrew Ng. Homework done in Python,
-  with a combination of hand-written and premade machine learning software.}
-\resumeItem{Embedded Systems}
-{Project-based class focusing on the creation of an embedded operating system. Created
-  a medical device using Arduino running a custom scheduler and task queue system.}
-\resumeItem{Stanford Compilers on Coursera}
-{Introductory online compilers course taught by Prof. Alex Aiken. Implemented a compiler
-  for COOL (Classroom Object-Oriented Language) targetting MIPS.}
-\resumeItem{3D Graphics at DigiPen Institute of Technology}
-{Summer class introducing 3D Graphics, first algebraically and then using linear algebra.
-  Implemented a 3D Graphics pipeline from scratch in C (starting only with a SetPixel
-  function) which draws colorful cubes, and allows the user to rotate the camera.}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-\fakesection{Accomplishments}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{\color{lightblue}Accomplishments}{}
-{}{}
-\vspace{-8pt}
-\resumeItemListStart
-\resumeItem{2017 ACM ICPC Regionals Qualifier}
-{Won 6th place at the UW ACM ICPC competition on team MATLAB Indexers, qualifying
-  for regionals.}
-\resumeItem{Hunt the Wumpus Alumni Challenge 2016 Winner}
-{Programmed a game in C\# from scratch and was selected by a panel of judges as the winner for
-  having the most polished and most entertaining game. Available at
-  \href{https://www.github.com/save-buffer/ShooterGame}{github.com/save-buffer/ShooterGame}}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
-
-\fakesection{Projects}
-\resumeSubHeadingListStart
-
-\resumeSubheading
-{\color{lightblue}Projects}{}
-{}{}
-\vspace{-8pt}
-\resumeItemListStart
-\resumeItem{Robotics Algorithms}
-{Computer vision and inverse kinematics algorithms written for use by the Husky Robotics
-  team. Computer vision can locate tennis balls in an image and segment a keyboard into
-  keys. The inverse kinematics algorithm was created by myself and another member of the
-  team and implemented by me. Available at
-  \href{https://github.com/save-buffer/robot\_cv}{github.com/save-buffer/robot\_cv},
-  \href{https://github.com/save-buffer/UseArm}{github.com/save-buffer/UseArm}}
-\resumeItem{Slang}
-{Compiler for a low-level functional declarative language (like Erlang) written in C.
-Available at \href{https://github.com/save-buffer/slang}{github.com/save-buffer/slang}}
-\resumeItem{SashCopter}
-{An attempt at controlling a drone using an EEG Headset. Main drone control software is
-  written. Mind-controlled aspect deemed unsuccessful due to the lack of resolution on
-  the headset.  
-  \href{https://www.github.com/save-buffer/SashCopter}{github.com/save-buffer/SashCopter}}
-\resumeItemListEnd
-\resumeSubHeadingListEnd
-
 \end{document}
