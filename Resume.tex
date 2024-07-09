@@ -13,6 +13,10 @@
 \usepackage{fontawesome}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\usepackage{paracol}
+
+\usepackage{microtype}
 
 \usepackage[sfdefault, thin]{roboto}
 \renewcommand\familydefault{\sfdefault} 
@@ -25,8 +29,8 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.0in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
@@ -66,7 +70,7 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{4pt}
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     {\small#3} & {\small #4} \\
   \end{tabular*}\vspace{-5pt}
@@ -111,9 +115,33 @@
 \end{tabularx}
 
 \fakesection{Goal}
+\begin{tcolorbox}
 I'm an engineer passionate in designing and applying novel approaches to make programs run
-faster. I am interested in any of low-level optimization, heterogeneous computing, compilers,
-and distributed systems. 
+faster. I am interested in low-level optimizations, parallel computing, heterogeneous computing,
+compilers, and distributed systems.
+\end{tcolorbox}
+
+\columnratio{0.25}
+\begin{paracol}{2}
+
+\begin{tcolorbox}[size=small]
+\textbf{Projects}
+\begin{itemize}[leftmargin=*]
+\item \href{https://github.com/save-buffer/gigagrad}{\textbf{Gigagrad}}: A deep learning compiler
+  in C++. Performs autodifferentiation and compiles to various backends.
+\item \textbf{Steamed Hams}: A work-stealing, page-stealing, IO-completion stealing parallel runtime
+  written in C. Will eventually have a SQL query engine on it.
+\end{itemize}
+
+\textbf{Achievements}
+\begin{itemize}[leftmargin=*]
+\item \href{https://x.com/AGIHouseSF/status/1793506669328031907}{\textbf{AGI House Hackathon Winner}}: Won
+  the Hardcore Systems Hackathon by implementing a new backend for Gigagrad.
+\end{itemize}
+\vfill
+\end{tcolorbox}
+\switchcolumn[1]
+\begin{tcolorbox}[breakable]
 \fakesection{Experience}
 \resumeSubHeadingListStart
 \resumeSubheading{Neon}{Remote (Seattle, WA)}
@@ -123,10 +151,10 @@ and distributed systems.
 {Implemented an eBPF-based ingress/egress network monitoring solution for Neon's VM infrastructure.}
 \resumeItem{DiskANN}
 {Prototyped a high performance DiskANN implementation with the eventual goal of getting put into
-  a Postgres extension. Outperformed libhnsw's index build by 2x}
+  a Postgres extension. Outperformed libhnsw's index build by over 2x}
 \resumeItem{Role Management}
-{Implemented Neon's role management, including synchronization between compute and control plane
-  and UI changes.}
+{Implemented Neon's role management, from synchronization between compute and control plane
+  to the relevant UI changes.}
 \resumeItemListEnd
 \vspace{2pt}
 \resumeSubheading{Voltron Data}{Remote (Seattle, WA)}
@@ -156,9 +184,9 @@ and distributed systems.
 {Proposed and drafted a design for GPU-based query execution, winning an internal contest
   for so-called ``moonshot ideas''. Prototyped aggregation on GPUs in an internal hackathon
   achieving a 2.5x speedup over CPU execution, demonstrating the promise of this approach.}
-\resumeItem{Regression Hunting}
-{Compared assembly code between old and new compilers, and provided necessary compiler hints
-  (such as forcing inlining) to fix performance regressions.}
+\resumeItem{Compiler Upgrade}
+{Resolved performance regressions from upgrading the compiler. Compared assembly code between old and
+  new compilers, and provided compiler hints to fix performance regressions.}
 \resumeItem{Columnstore Query Execution}
 {Proposed, designed, and implemented a significant refactor of core columnstore code,
   exposing several inefficiencies leading to a 2x speedup on some TPC-H queries.}
@@ -174,7 +202,7 @@ and distributed systems.
 \vspace{2pt}
 \resumeSubheading
 {Facebook}{Menlo Park, CA}
-{Software Engineering Intern: Oculus Application Platform Team}{June 2019 - September 2019}
+{Intern: Oculus Application Platform Team}{June 2019 - September 2019}
 \vspace{2pt}
 \resumeItemListStart
 \resumeItem{Swift Playgrounds on Windows}
@@ -240,4 +268,7 @@ and distributed systems.
 \end{tabular*}\vspace{-5pt}
 
 \resumeSubHeadingListEnd
+\end{tcolorbox}
+\end{paracol}
+
 \end{document}
